@@ -1,2 +1,0 @@
-for_window [class="floating-editor"] floating enable
-bindsym --release $mod+shift+a exec --no-startup-id "~/Projects/floating-editor/open-script.sh"
