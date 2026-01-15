@@ -20,7 +20,7 @@ scripts/install.sh
 ```
 Then add
 ```bash
-include ~/.config/i3/plugins/floating-window-config.conf
+include ~/.config/i3/plugins/floating-window.conf
 ```
 to your i3-config.
 

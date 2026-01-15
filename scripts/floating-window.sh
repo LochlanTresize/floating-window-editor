@@ -1,6 +1,6 @@
 #!/bin/bash
 ## open floating terminal in attached tmux session
-# TODO: filetype handler should be invoked here using i3 menu
+# TODO: filetype handler should be invoked here using dmenu
 DUNST_PORT="4101"
 
 dunstify -r $DUNST_PORT "Executing floating-window start script"
@@ -8,6 +8,8 @@ dunstify -r $DUNST_PORT "Executing floating-window start script"
 WIN_ID=$(xdotool getwindowfocus)
 xsel --clipboard --output | xsel --input --secondary
 xsel --clipboard --clear 
+
+
 xdotool key ctrl+c
 xsel --clipboard --output > /tmp/floating-window/floating-window-content.md
 
@@ -24,7 +26,7 @@ dunstify -r $DUNST_PORT "Floating-editor closed"
 i3-msg "[id=$WIN_ID] focus"
 
 cat /tmp/floating-window/floating-window-content.md | xsel --input --clipboard
-xdotool key  ctrl+v
+xdotool key ctrl+v
 
 # give the user back their previous copy and clean up
 xsel --secondary --output | xsel --input --clipboard
