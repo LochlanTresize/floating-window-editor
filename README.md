@@ -6,6 +6,8 @@ This, for example, allows emails, texts and jupyter notebooks to be edited with 
 
 The script can be invoked with text highlighted. This text will be available in the floating editor and the resulting written text will paste over what you have highlighted.
 
+Currently the script works with alacritty. Other terminal support may appear later.
+
 ## Install
 Run
 ```bash
