@@ -7,9 +7,10 @@ This, for example, allows emails, texts and jupyter notebooks to be edited with 
 The script can be invoked with text highlighted. This text will be available in the floating editor and the resulting written text will paste over what you have highlighted.
 
 ## Install
-Clone this repo
+Run
 ```bash
-git clone **
+git clone https://github.com/LochlanTresize/floating-window-editor.git
+cd floating-window-editor
 ```
 and run
 ```
@@ -21,6 +22,13 @@ Then add
 include ~/.config/i3/plugins/floating-window-config.conf
 ```
 to your i3-config.
+
+Now install the following dependencies (I assume you have i3 on X11):
+```
+xsel xdotool i3-msg
+```
+Additionally you may install `dunst` and `dunstify` to receive notifications from the script.
+
 
 The default mapping to invoke the script is `mod+shift+a`. To change this mapping edit
 ```bash

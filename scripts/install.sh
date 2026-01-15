@@ -1,7 +1,9 @@
 #!/bin/bash
-mkdir ~/.config/i3/plugins/
-cp ./config-files/floating-window-config ~/.config/i3/plugins/
 
-# log to nvim for now, can do to /dev/shm/ later use 2> outlog to do so
-# mkdir log
-# touch log/plugin-log
+set +e
+mkdir -p ~/.config/i3/plugins/
+cp config-files/floating-window.conf ~/.config/i3/plugins/
+
+mkdir -p ~/.floating-window-editor/
+cp scripts/floating-window.sh ~/.floating-window-editor/
+chmod +x ~/.floating-window-editor/floating-window.sh
